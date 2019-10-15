@@ -1,0 +1,7 @@
+<div class="partido-grid">
+    <app-partido 
+      *ngFor="let partido of partidos" 
+      (partidoClicked)="clickProduct($event)" 
+      [partido]="partido">
+    </app-partido>
+</div>

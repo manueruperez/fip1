@@ -1,0 +1,9 @@
+<h3 appHighlight>{{ partido.title | uppercase }}</h3>
+<h3>{{ partido.id }}</h3>
+<img [src]="partido.image1" alt="">
+<img [src]="partido.image2" alt="">
+<strong>{{ partido.marcador }}</strong>
+<p>{{ partido.description | slice:0:22}}</p>
+<p>{{ today | date:'HH:mm'}}</p>
+<button (click)="agregar()">agregar</button>
+<a [routerLink]="['/partidos',partido.id]">Ver Detalle</a>
