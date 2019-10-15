@@ -5,5 +5,5 @@
 <strong>{{ partido.marcador }}</strong>
 <p>{{ partido.description | slice:0:22}}</p>
 <p>{{ today | date:'HH:mm'}}</p>
-<button (click)="agregar()">agregar</button>
+<button (click)="agregar()" mat-raised-button color="primary">agregar</button>
 <a [routerLink]="['/partidos',partido.id]">Ver Detalle</a>

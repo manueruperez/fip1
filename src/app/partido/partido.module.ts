@@ -8,6 +8,8 @@ import { PartidosComponent } from './components/partidos/partidos.component';
 import { PartidosRoutingModule } from './partido-routing.module';
 import { SharedModule } from './../shared/shared.module';
 
+import { MaterialModule } from './../material/material.module';
+
 @NgModule({
     declarations: [
         PartidoComponent,
@@ -17,7 +19,8 @@ import { SharedModule } from './../shared/shared.module';
     imports: [
         SharedModule,
         CommonModule,
-        PartidosRoutingModule
+        PartidosRoutingModule,
+        MaterialModule
     ]
 })
 
