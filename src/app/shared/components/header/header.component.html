@@ -1,5 +1,24 @@
-<nav>
-    <a routerLink="/home" routerLinkActive="active">Home</a>
-    <a routerLink="/partidos" routerLinkActive="active">Partidos</a>
-    <a routerLink="/contact" routerLinkActive="active">contacto</a>
-</nav>
+<mat-toolbar color ="primary">
+    <mat-toolbar-row>
+        <div class="row between-xs middle-xs header-row">
+                <nav>
+                        <a mat-raised-button routerLink="/home" routerLinkActive="active">
+                            <mat-icon>home</mat-icon>
+                            Home
+                        </a>
+                        <a mat-raised-button routerLink="/partidos" routerLinkActive="active">
+                            <mat-icon>sports_soccer</mat-icon>
+                            Partidos   
+                        </a>
+                        <a mat-raised-button routerLink="/contact" routerLinkActive="active">
+                            <mat-icon>sports_soccer</mat-icon>
+                            contacto
+                        </a>
+                    </nav>
+                    <a  mat-raised-button matBadge="!" matBadgeColor="warn">
+                        <mat-icon>videocam</mat-icon>
+                        videos
+                    </a>
+        </div>        
+    </mat-toolbar-row>
+</mat-toolbar>
