@@ -7,7 +7,7 @@ import { PartidosComponent } from './components/partidos/partidos.component';
 
 import { PartidosRoutingModule } from './partido-routing.module';
 import { SharedModule } from './../shared/shared.module';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from './../material/material.module';
 
 @NgModule({
@@ -20,7 +20,8 @@ import { MaterialModule } from './../material/material.module';
         SharedModule,
         CommonModule,
         PartidosRoutingModule,
-        MaterialModule
+        MaterialModule,
+        FlexLayoutModule
     ]
 })
 

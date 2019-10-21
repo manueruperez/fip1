@@ -1,4 +1,4 @@
-<div class="partido-grid">
+<div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="32px" fxLayoutAlign="start" class="container-layout">
     <app-partido 
       *ngFor="let partido of partidos" 
       (partidoClicked)="clickProduct($event)" 

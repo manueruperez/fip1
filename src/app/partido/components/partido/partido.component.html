@@ -1,20 +1,31 @@
-<mat-card>
-    <mat-card-header>
-        <mat-card-title>{{ partido.title | uppercase }}</mat-card-title>
-        <mat-card-subtitle>{{ partido.marcador }}</mat-card-subtitle>
-    </mat-card-header>
-    <div class="crop-image1">
-        <img [src]="partido.image1" alt="">
-        <img [src]="partido.image2" alt="">
-    </div>
-    <mat-card-content>
-        <p>{{ partido.description | slice:0:22}}</p>        
-    </mat-card-content>
-    <mat-card-actions>
-        <a mat-raised-button [routerLink]="['/partidos',partido.id]">Ver Detalle</a>
-        <button (click)="agregar()" mat-raised-button color="primary">agregar</button>
-    </mat-card-actions>
-</mat-card>
+<div fxFlex="0 1 calc(33.3% - 32px)" fxFlex.lt-md="0 1 calc(50% - 32px)" fxFlex.lt-sm="100%">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>{{ partido.title | uppercase }}</mat-card-title>
+            <mat-card-subtitle>{{ partido.marcador }}</mat-card-subtitle>
+        </mat-card-header>
+        <!-- <div class="crop-image"> -->
+        <div fxLayout="row" fxLayoutAlign="space-evenly center">
+            <div class="ci1">
+                <img [src]="partido.image1" alt="" class="imagen1">
+            </div>
+            <div>
+                <p>VS</p>
+            </div>
+            <div class="ci2">
+                <img [src]="partido.image2" alt="" class="imagen2">
+            </div>
+        </div>
+        <!-- </div> -->
+        <mat-card-content>
+            <p>{{ partido.description | slice:0:22}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <a mat-raised-button [routerLink]="['/partidos',partido.id]">Ver Detalle</a>
+            <button (click)="agregar()" mat-raised-button color="primary">agregar</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
 <!-- <h3 appHighlight>{{ partido.title | uppercase }}</h3>
 <h3>{{ partido.id }}</h3>
 <img [src]="partido.image1" alt="">
